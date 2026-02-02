@@ -1,0 +1,44 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #e6522c;
+  --ifm-color-primary-dark: #d8471a;
+  --ifm-color-primary-darker: #cb4318;
+  --ifm-color-primary-darkest: #a73714;
+  --ifm-color-primary-light: #eb5d3e;
+  --ifm-color-primary-lighter: #ed6751;
+  --ifm-color-primary-lightest: #f17a63;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  
+  /* Ensure proper light mode colors */
+  --ifm-color-content: #1c1e21;
+  --ifm-background-color: #ffffff;
+  --ifm-background-surface-color: #ffffff;
+}
+
+/* For readability purposes, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #f17a63;
+  --ifm-color-primary-dark: #ed6751;
+  --ifm-color-primary-darker: #eb5d3e;
+  --ifm-color-primary-darkest: #e6522c;
+  --ifm-color-primary-light: #f58d75;
+  --ifm-color-primary-lighter: #f79687;
+  --ifm-color-primary-lightest: #f9a098;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  
+  /* Ensure proper dark mode colors */
+  --ifm-color-content: #e3e3e3;
+  --ifm-background-color: #1b1b1d;
+  --ifm-background-surface-color: #242526;
+}
+
+.prometheus-logo {
+  height: 32px;
+}

@@ -1,0 +1,48 @@
+# Gradle build outputs
+build/
+bin/
+dist/
+
+# Local temp files
+temp/
+
+# Gradle user home directory
+.gradle/
+
+# Local Gradle test cache
+.gradle-test-results/
+
+# Gradle Daemon logs
+.gradle-daemon/
+
+# MacOS Files
+.DS_Store
+
+# NPM files
+node_modules/
+
+gradle.properties
+
+# Java Project files
+.project
+.classpath
+.settings
+
+# Pytest files
+*.py[cod]
+__pycache__/
+
+# Ignition content
+.resources
+conversion-report.txt
+
+# Backup files from claude
+.bak
+.bak*
+
+# Docusaurus Docs
+.docusaurus/
+
+.env
+
+secrets/

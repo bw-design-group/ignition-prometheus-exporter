@@ -1,0 +1,10 @@
+name: Deploy Documentation
+
+on:
+  push:
+    branches: [ main ]
+    paths: [ 'docs/**' ]
+
+jobs:
+  deploy:
+    uses: bw-design-group/workflows/.github/workflows/deploy-docusaurus-docs.yaml@main
