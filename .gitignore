@@ -45,4 +45,7 @@ conversion-report.txt
 
 .env
 
-secrets/
+secrets/# Local testing artifacts produced by manual verification runs
+.testing/
+.playwright-mcp/
+

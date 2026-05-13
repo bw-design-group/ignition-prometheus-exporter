@@ -3,6 +3,9 @@ plugins {
     id("eclipse") // Added for better IDE support with Eclipse & VS Code
 }
 
+// Determine the Ignition target version (8.1 or 8.3). Default is 8.3.
+val ignitionTarget = rootProject.findProperty("ignitionTarget")?.toString() ?: "8.3"
+
 // Determine the project version once and reuse it everywhere
 val versionProp = project.findProperty("version")?.toString()
 val projectVersion = if (versionProp.isNullOrBlank() || versionProp == "unspecified") "0.0.1-SNAPSHOT" else versionProp
@@ -17,21 +20,19 @@ allprojects {
     apply(plugin = "eclipse")
 }
 
-extra["sdkVersion"] = "8.1.44"
-
 ignitionModule {
     name.set("Prometheus Metrics Exporter")
     fileName.set("Prometheus-Exporter.modl")
     id.set("dev.bwdesigngroup.prometheus.PrometheusExporter")
     moduleVersion.set(projectVersion)
     moduleDescription.set("Adds Prometheus metrics exporting to Ignition")
-    requiredIgnitionVersion.set(libs.versions.ignition.get())
+    requiredIgnitionVersion.set(if (ignitionTarget == "8.1") "8.1.44" else "8.3.0")
 
     projectScopes.putAll(
         mapOf(
             ":common" to "GCD",
             ":gateway" to "G",
-            ":designer" to "D", 
+            ":designer" to "D",
             ":client" to "C"
         )
     )

@@ -1,5 +1,7 @@
 [versions]
 ignition = "8.1.44"
+ignition-sdk = "8.3.0"
+modl-plugin = "0.5.0"
 prometheus = "0.16.0"
 slf4j = "2.0.9"
 
@@ -13,6 +15,7 @@ ignition-designer-api = { module = "com.inductiveautomation.ignitionsdk:designer
 
 # Prometheus dependencies
 prometheus = { module = "io.prometheus:simpleclient", version.ref = "prometheus" }
+prometheus-common = { module = "io.prometheus:simpleclient_common", version.ref = "prometheus" }
 prometheus-servlet = { module = "io.prometheus:simpleclient_servlet", version.ref = "prometheus" }
 prometheus-dropwizard = { module = "io.prometheus:simpleclient_dropwizard", version.ref = "prometheus" }
 
@@ -20,4 +23,4 @@ prometheus-dropwizard = { module = "io.prometheus:simpleclient_dropwizard", vers
 slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
 
 [plugins]
-ignition-module = { id = "io.ia.sdk.modl", version = "0.3.0" }
+ignition-module = { id = "io.ia.sdk.modl", version.ref = "modl-plugin" }

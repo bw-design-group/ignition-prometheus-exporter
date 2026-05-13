@@ -5,6 +5,12 @@ on:
     branches: [ main ]
     paths: [ 'docs/**' ]
 
+# Minimum permissions for the workflow; jobs that need more opt up explicitly.
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   deploy:
     uses: bw-design-group/workflows/.github/workflows/deploy-docusaurus-docs.yaml@main
